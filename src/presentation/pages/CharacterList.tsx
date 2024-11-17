@@ -45,10 +45,14 @@ const Card = styled.li`
 
   p {
     padding: 10px;
+    margin: 0;
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
     color: #333;
+    line-height: 1.4;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
   }
 `;
 
