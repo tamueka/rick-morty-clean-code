@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import { useRoutes } from "react-router-dom";
-import { routes } from "./routes"; // Importa las rutas definidas en el archivo routes.ts
+import { routes } from "./routes";
 
 const AppWithProvider: React.FC = () => {
   const routing = useRoutes(routes);
 
-  return <Suspense fallback={<div>Loading...</div>}>{routing}</Suspense>;
+  return <Suspense fallback={<div>Cargando...</div>}>{routing}</Suspense>;
 };
 
 export default AppWithProvider;
