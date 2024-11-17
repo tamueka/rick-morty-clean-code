@@ -1,5 +1,5 @@
-import { CharacterRepository } from "@/domain/repositories/CharacterRepository";
 import { Character } from "@/domain/entities/Character";
+import { CharacterRepository } from "@/domain/repositories/CharacterRepository";
 
 export class CharacterAPIRepository implements CharacterRepository {
   private readonly baseUrl = "https://rickandmortyapi.com/api";

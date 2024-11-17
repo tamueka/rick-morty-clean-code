@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { characterContextProps } from "./CharacterContext";
-import { useFetchCharacters } from "./useFetchCharacters";
 import { useFetchCharacterById } from "./useFetchCharacterById";
+import { useFetchCharacters } from "./useFetchCharacters";
 
 export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

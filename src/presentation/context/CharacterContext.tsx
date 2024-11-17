@@ -1,5 +1,5 @@
-import { createContext, useContext } from "react";
 import { Character } from "@/domain/entities/Character";
+import { createContext, useContext } from "react";
 
 interface CharacterContextProps {
   characters: Character[];
@@ -15,9 +15,7 @@ export const characterContextProps = createContext<
 export const characterContext = () => {
   const context = useContext(characterContextProps);
   if (!context) {
-    throw new Error(
-      "CharacterContext debe usarse dentro de CharacterProvider"
-    );
+    throw new Error("CharacterContext debe usarse dentro de CharacterProvider");
   }
   return context;
 };

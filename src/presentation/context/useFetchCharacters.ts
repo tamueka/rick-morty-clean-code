@@ -1,7 +1,7 @@
-import { useState, useCallback } from "react";
-import { CharacterAPIRepository } from "../../../src/infrastructure/repositories/CharacterAPIRepository";
+import { useCallback, useState } from "react";
 import { GetCharacters } from "../../../src/application/usecases/GetCharacters";
 import { Character } from "../../../src/domain/entities/Character";
+import { CharacterAPIRepository } from "../../../src/infrastructure/repositories/CharacterAPIRepository";
 
 export const useFetchCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);

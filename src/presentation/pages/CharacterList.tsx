@@ -1,9 +1,8 @@
+import styled from "@emotion/styled";
 import React from "react";
 import { Link } from "react-router-dom";
 import { characterContext } from "../context/CharacterContext";
-import styled from "@emotion/styled";
 
-// Estilos usando Emotion
 const Container = styled.div`
   padding: 20px;
   max-width: 1200px;
