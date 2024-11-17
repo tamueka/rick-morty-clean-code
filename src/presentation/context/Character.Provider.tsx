@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { RickAndMortyContext } from "./CharacterContext";
+import { characterContextProps } from "./CharacterContext";
 import { useFetchCharacters } from "./useFetchCharacters";
 import { useFetchCharacterById } from "./useFetchCharacterById";
 
@@ -14,10 +14,10 @@ export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
   }, [fetchCharacters]);
 
   return (
-    <RickAndMortyContext.Provider
+    <characterContextProps.Provider
       value={{ characters, character, fetchCharacters, fetchCharacterById }}
     >
       {children}
-    </RickAndMortyContext.Provider>
+    </characterContextProps.Provider>
   );
 };

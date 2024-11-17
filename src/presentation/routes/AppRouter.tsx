@@ -1,14 +1,11 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import  CharacterList  from "../pages/CharacterList";
-import  CharacterDetail  from "../pages/CharacterDetail";
+import React, { Suspense } from "react";
+import { useRoutes } from "react-router-dom";
+import { routes } from "./routes"; // Importa las rutas definidas en el archivo routes.ts
 
+const AppWithProvider: React.FC = () => {
+  const routing = useRoutes(routes);
 
-const AppWithProvider = () => (
-  <Routes>
-    <Route path="/" element={<CharacterList />} />
-    <Route path="/detail/:id" element={<CharacterDetail />} />
-  </Routes>
-);
+  return <Suspense fallback={<div>Loading...</div>}>{routing}</Suspense>;
+};
 
 export default AppWithProvider;
