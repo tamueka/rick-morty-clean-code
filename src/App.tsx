@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { RickAndMortyProvider } from "../src/presentation/context/RickAndMortyProvider";
-import AppRouter from '../src/presentation/routes/AppRouter';
+import AppRouter from "../src/presentation/routes/AppRouter";
+import { CharacterProvider } from "./presentation/context/Character.Provider";
 
 const App: React.FC = () => {
   return (
-    <RickAndMortyProvider>
+    <CharacterProvider>
       <BrowserRouter>
         <AppRouter />
       </BrowserRouter>
-    </RickAndMortyProvider>
+    </CharacterProvider>
   );
 };
 

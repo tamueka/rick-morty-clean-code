@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { useRickAndMortyContext } from "../context/RickAndMortyContext";
+import {  characterContext } from "../context/CharacterContext";
 
-export const CharacterDetail: React.FC = () => {
+ const CharacterDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { characters } = useRickAndMortyContext();
+  const { characters } = characterContext();
 
   const character = characters.find(
     (char: any) => char.id === parseInt(id || "", 10)
@@ -25,3 +25,4 @@ export const CharacterDetail: React.FC = () => {
     </div>
   );
 };
+export default CharacterDetail;

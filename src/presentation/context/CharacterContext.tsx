@@ -1,22 +1,22 @@
 import { createContext, useContext } from "react";
 import { Character } from "@/domain/entities/Character";
 
-interface RickAndMortyContextProps {
+interface CharacterContextProps {
   characters: Character[];
   character: Character | null;
   fetchCharacters: () => void;
   fetchCharacterById: (id: string) => void;
 }
 
-export const RickAndMortyContext = createContext<
-  RickAndMortyContextProps | undefined
+export const characterContextProps = createContext<
+  CharacterContextProps | undefined
 >(undefined);
 
-export const useRickAndMortyContext = () => {
-  const context = useContext(RickAndMortyContext);
+export const characterContext = () => {
+  const context = useContext(characterContextProps);
   if (!context) {
     throw new Error(
-      "useRickAndMortyContext debe usarse dentro de RickAndMortyProvider"
+      "CharacterContext debe usarse dentro de CharacterProvider"
     );
   }
   return context;

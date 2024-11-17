@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { RickAndMortyContext } from "./RickAndMortyContext";
+import { RickAndMortyContext } from "./CharacterContext";
 import { useFetchCharacters } from "./useFetchCharacters";
 import { useFetchCharacterById } from "./useFetchCharacterById";
 
-export const RickAndMortyProvider: React.FC<{ children: React.ReactNode }> = ({
+export const CharacterProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const { characters, fetchCharacters } = useFetchCharacters();

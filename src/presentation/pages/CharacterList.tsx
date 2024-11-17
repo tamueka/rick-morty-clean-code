@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useRickAndMortyContext } from "../context/RickAndMortyContext";
+import { characterContext } from "../context/CharacterContext";
 
-export const CharacterList: React.FC = () => {
-  const { characters } = useRickAndMortyContext();
+const CharacterList: React.FC = () => {
+  const { characters } = characterContext();
 
   return (
     <div>
-      <h1>Rick and Morty Characters</h1>
+      <h1>Characters</h1>
       <ul>
         {characters.map((character: any) => (
           <li key={character.id}>
@@ -21,3 +21,5 @@ export const CharacterList: React.FC = () => {
     </div>
   );
 };
+
+export default CharacterList;
