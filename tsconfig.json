@@ -1,7 +1,15 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "jsx": "react", // Soporte para JSX en proyectos React
+    "module": "esnext", // Para soportar módulos modernos
+    "target": "esnext", // Soporte para características modernas de JS
+    "moduleResolution": "node", // Resolución de módulos al estilo Node.js
+    "baseUrl": "./", // Base para imports relativos
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "strict": true, // Opciones estrictas recomendadas
+    "esModuleInterop": true, // Soporte para imports comunes
+    "skipLibCheck": true // Mejora la velocidad ignorando comprobaciones en libs
+  }
 }
