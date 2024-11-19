@@ -3,6 +3,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { characterContext } from "../context/CharacterContext";
 
+const CharacterList: React.FC = () => {
+  const { characters } = characterContext();
+
+  if (!characters || characters.length === 0) {
+    return <Message>No characters found.</Message>;
+  }
+
+  return (
+    <Container>
+      <Title>Characters</Title>
+      <Grid>
+        {characters.map((character: any) => (
+          <Card key={character.id}>
+            <Link to={`/detail/${character.id}`}>
+              <img src={character.image} alt={character.name} loading="lazy" />
+              <p>{character.name}</p>
+            </Link>
+          </Card>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+
 const Container = styled.div`
   padding: 20px;
   max-width: 1200px;
@@ -59,29 +83,5 @@ const Message = styled.p`
   font-size: 1.2rem;
   color: #666;
 `;
-
-const CharacterList: React.FC = () => {
-  const { characters } = characterContext();
-
-  if (!characters || characters.length === 0) {
-    return <Message>No characters found.</Message>;
-  }
-
-  return (
-    <Container>
-      <Title>Characters</Title>
-      <Grid>
-        {characters.map((character: any) => (
-          <Card key={character.id}>
-            <Link to={`/detail/${character.id}`}>
-              <img src={character.image} alt={character.name} loading="lazy" />
-              <p>{character.name}</p>
-            </Link>
-          </Card>
-        ))}
-      </Grid>
-    </Container>
-  );
-};
 
 export default CharacterList;

@@ -13,7 +13,7 @@ const CharacterDetail: React.FC<{ character: Character }> = () => {
   );
 
   if (!character) {
-    return <p>Character not found!</p>;
+    return <p>Character no encontrado!</p>;
   }
   return (
     <Container>
