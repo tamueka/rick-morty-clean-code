@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { Suspense } from "react";
+import React from "react";
 import { useRoutes } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { characterContext } from "../context/CharacterContext";

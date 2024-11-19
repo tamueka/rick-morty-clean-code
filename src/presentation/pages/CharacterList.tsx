@@ -7,12 +7,12 @@ const CharacterList: React.FC = () => {
   const { characters } = characterContext();
 
   if (!characters || characters.length === 0) {
-    return <Message>No characters found.</Message>;
+    return <Message>No se han encontrado personajes</Message>;
   }
 
   return (
     <Container>
-      <Title>Characters</Title>
+      <Title>Personajes</Title>
       <Grid>
         {characters.map((character: any) => (
           <Card key={character.id}>
